@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		body {
+			margin: 0px;
+			padding: 0px;
+		}
+	</style>
+	<title>Page Title</title>
+</head>
+
+<body>
+
+	<canvas id="tela" width="640" height="480"></canvas>
+	<div style="display:none;">
+		<img id="parada" src="parada.gif">
+		<img id="direita" src="direita.gif">
+		<img id="esquerda" src="esquerda.gif">
+		<img id="cima" src="cima.gif">
+		<img id="baixo" src="baixo.gif">
+		<img id="direita_baixo" src="direita_baixo.gif">
+		<img id="direita_cima" src="direita_cima.gif">
+		<img id="esquerda_baixo" src="esquerda_baixo.gif">
+		<img id="esquerda_cima" src="esquerda_cima.gif">
+		<img id="inimigo" src="inimigo.gif">
+	</div>
+
+	<script src="Recursos.js"> // deve ser importada antes de todas</script>
+	<script src="Personagem.js"> // deve ser importada antes da Game.js</script>
+	<script src="Inimigo.js"> // deve ser importada antes da Game.js</script>
+	<script src="Game.js">// deve ser importada por último</script>
+	
+
+</body>
+
+</html>

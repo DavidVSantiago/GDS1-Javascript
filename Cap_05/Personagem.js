@@ -1,0 +1,17 @@
+person_parada = document.getElementById('parada');
+person_direita = document.getElementById('direita');
+person_esquerda = document.getElementById('esquerda');
+person_cima = document.getElementById('cima');
+person_baixo = document.getElementById('baixo');
+person_direita_baixo = document.getElementById('direita_baixo');
+person_direita_cima = document.getElementById('direita_cima');
+person_esquerda_baixo = document.getElementById('esquerda_baixo');
+person_esquerda_cima = document.getElementById('esquerda_cima');
+person_atual = parada;
+person_raio = 50;
+person_velX = 3;
+person_velY = 3;
+person_posX = 100;
+person_posY = 100;
+person_centroX = person_posX + person_raio;
+person_centroY = person_posY + person_raio;

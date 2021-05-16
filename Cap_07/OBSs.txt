@@ -1,0 +1,1 @@
+Não dá para implementar à risca todo o mecanisma de normalização em javascript!
