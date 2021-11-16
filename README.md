@@ -1,10 +1,11 @@
 # GDS1-Javascript <a href="https://algol.dev" target="_blank"> <img src="https://algol.dev/wp-content/uploads/2021/11/drop_algol_b.png" title="hover text"></a>
 
-Código dos 12 capítulos do curso "Game Dev Series vol.01" - versão Javascript.
+Código dos 12 capítulos do livro "Game Dev Series vol.01" - versão Javascript.<br>
+Para obter mais informações sobre o livro [clique aqui](https://algol.dev/livros/gds1/)
 
-
-
-## Getting Started
+## Ilustrações do jogo em execução
+![img1]()
+![img2]()
 
 ### Dependencies
 
