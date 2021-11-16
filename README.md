@@ -1,6 +1,8 @@
-# GDS1-Javascript ![algol.dev](https://algol.dev/wp-content/uploads/2021/11/drop_algol_b.png)
+# GDS1-Javascript <a href="https://algol.dev"> <img src="https://algol.dev/wp-content/uploads/2021/11/drop_algol_b.png" title="hover text"></a>
 
 Código dos 12 capítulos do curso "Game Dev Series vol.01" - versão Javascript.
+
+
 
 ## Getting Started
 
