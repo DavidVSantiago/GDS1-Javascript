@@ -18,6 +18,6 @@ Cada uma das pastas contém o projeto pronto de cada um dos capítulos do livro.
 
 * Execute diretamente o arquivo ```index.html``` em qualquer navegador web.
 
-## Authors
+## Author
 
 Almir David Valente Santiago [@david_v_santiago](https://linktr.ee/david.santiago)
