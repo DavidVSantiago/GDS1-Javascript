@@ -17,6 +17,4 @@ Para obter mais informações sobre o livro [clique aqui](https://algol.dev/livr
 
 ## Authors
 
-Contributors names and contact info
-
 Almir David Valente Santiago [@david_v_santiago](https://linktr.ee/david.santiago)
