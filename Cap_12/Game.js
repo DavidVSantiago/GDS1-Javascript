@@ -56,6 +56,7 @@ function update(deltaTime) {
         reiniciar();
         agendarTransicao(2000, 'E');
     }
+    window.requestAnimationFrame(gameLoop);
 }
 
 // 3ª função do gameloop
@@ -69,13 +70,14 @@ function render() {
         context.fillStyle = 'white';
         context.fillText(msgFim, 150, 200);
     } else { // ESTADO PAUSADO ou EXECUTANDO
-        context.drawImage(bg, 0, 0); // desenha o fundo do jogo
+        //context.drawImage(bg, 0, 0); // desenha o fundo do jogo
+        context.drawImage(offscreen,0,0);
         context.fillStyle = 'gray';
         context.fillRect(LIMITE_DIREITO, 0, 5, ALTURA_TELA); // desenha o limite do Personagem
         context.fillRect(LIMITE_ESQUERDO, 0, 5, ALTURA_TELA); // desenha o limite do Inimigo
-        context.drawImage(person_atual, person_posX, person_posY);
-        context.drawImage(inimigo_atual, inimigo_posX, inimigo_posY);
-        context.drawImage(bolinha_atual, bolinha_posX, bolinha_posY);
+        context.drawImage(person_atual, Math.floor(person_posX), Math.floor(person_posY));
+        context.drawImage(inimigo_atual, Math.floor(inimigo_posX), Math.floor(inimigo_posY));
+        context.drawImage(bolinha_atual, Math.floor(bolinha_posX), Math.floor(bolinha_posY));
         if (ESTADO == 'E') { // se estiver no ESTADO EXECUTANDO
             context.font = "40px Arial narrow";
             context.fillStyle = 'white';
@@ -271,4 +273,7 @@ function keyReleased(e) {
     }
 }
 
-setInterval(gameLoop, 17); // define as repetições do gameloop
+window.onload = ()=>{
+    offContext.drawImage(bg,0,0);
+    requestAnimationFrame(gameLoop); // define as repetições do gameloop
+};
