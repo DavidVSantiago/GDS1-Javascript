@@ -1,31 +1,46 @@
+import SpriteBatch from '../sprites/sprite_batch.js';
+import Resources from '../resources.js';
+
 class Scene{
-    constructor(){
-        this.STATES = new Map();
-        this.actualState={};
+    constructor(name){
+        this.name=name; // toda Scene possui um nome associado a ela
+        this.spriteBatchList = []; // array de states da Cena
+        this.actualState;
+        this.res = Resources.getInstance();
     }
 
     /** Registra um novo Estado e o seu spriteBatch associado */
-    registerState(stateName,spriteBatch){
-        this.STATES.set(stateName,spriteBatch);
-        if(this.STATES.size==1) this.changeState(stateName); // se for o primeiro Estado registrado, o configura como atual
+    registerState(stateIndex){
+        this.spriteBatchList.push(new SpriteBatch(stateIndex));
+        if(this.spriteBatchList.length==1) this.changeState(stateIndex); // se for o primeiro Estado registrado, o configura como atual
+    }
+    
+    /* Altera o State atual*/
+    changeState(stateIndex){
+        if(stateIndex>=this.spriteBatchList.length)
+            throw new Error("O registro dos STATES deve obedecer a ordem dos seus índices!");
+        this.actualState = this.spriteBatchList[stateIndex];
+    }  
+
+    putSprite(sprite,stateIndex){
+        this.spriteBatchList[stateIndex].putSprite(sprite);
     }
 
-    /** Altera o State atual*/
-    changeState(stateName){
-        this.actualState = {
-            name:stateName,
-            batch:this.STATES.get(stateName)
-        };
+    handleEvents(){
+        if(this.res.vk_up) console.log('Tecla cima');
+        if(this.res.vk_down) console.log('Tecla baixo');
+        if(this.res.vk_left) console.log('Tecla esquerda');
+        if(this.res.vk_right) console.log('Tecla direita');
+        if(this.res.vk_esc) console.log('Tecla esc');
     }
 
-    /** Retorna o nome do Estado */
-    getStateName(){
-        return this.actualState.name;
+    update(){
+        
     }
 
     render(){
         // renderiza o srpitebatch do stado atual
-        this.actualState.batch.render();
+        this.actualState.render();
     }
 }
 

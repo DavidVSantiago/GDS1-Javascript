@@ -10,7 +10,6 @@ class Sprite{
         this.frames.onload=()=>{
             this.loaded=true;
         }
-        
     }
     render(ctx){
         ctx.drawImage(this.getFrame(),Math.floor(this.posX),Math.floor(this.posY));
